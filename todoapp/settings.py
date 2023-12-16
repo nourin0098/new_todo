@@ -83,8 +83,26 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+# 
 
-DATABASES['default'] = dj_database_url.config()
+
+# # Determine the BASE_DIR for the project
+# BASE_DIR = Path(__file__).resolve().parent.parent
+
+# # Set the path to the .env file
+# env_path = BASE_DIR / '.env'
+
+
+# # Debugging - print DATABASE_URL
+# print(f'DATABASE_URL: {config("DATABASE_URL")}')
+
+# # Database configuration using dj_database_url
+# DATABASES = {
+#     'default': dj_database_url.config(default=config('DATABASE_URL'))
+# }
+
+
+# DATABASES['default'] = dj_database_url.config(default=os.environ.get('DATABASE_URL'))
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql',
